@@ -1,0 +1,48 @@
+/* src/components/Cards/Cards.css */
+.ct-stat-card {
+  background: var(--ink-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 22px 20px;
+}
+.ct-stat-card__label {
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.ct-stat-card__value {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.ct-stat-card__sub { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+
+.ct-panel {
+  background: var(--ink-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 28px;
+}
+.ct-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.ct-panel__title { font-size: 1.2rem; color: var(--text-primary); }
+
+.ct-empty {
+  text-align: center;
+  padding: 48px 24px;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+}
+.ct-empty__icon { font-size: 28px; margin-bottom: 10px; }
+.ct-empty__title { font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.ct-empty__message { font-size: 13px; color: var(--text-muted); }

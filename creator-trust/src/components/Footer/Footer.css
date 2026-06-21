@@ -1,0 +1,32 @@
+/* src/components/Footer/Footer.css */
+.ct-footer { padding: 64px 0 32px; border-top: 1px solid var(--line); }
+.ct-footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+.ct-footer__col h5 {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+.ct-footer__col { display: flex; flex-direction: column; gap: 10px; }
+.ct-footer__col a { font-size: 13.5px; color: var(--text-secondary); }
+.ct-footer__col a:hover { color: var(--text-primary); }
+
+.ct-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 720px) {
+  .ct-footer__inner { grid-template-columns: 1fr 1fr; }
+}

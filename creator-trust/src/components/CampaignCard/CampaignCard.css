@@ -1,0 +1,55 @@
+/* src/components/CampaignCard/CampaignCard.css */
+.campaign-card {
+  background: var(--ink-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: var(--transition);
+}
+.campaign-card:hover { border-color: var(--line-strong); }
+
+.campaign-card__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+.campaign-card__title { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+
+.campaign-card__status {
+  flex-shrink: 0;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.campaign-card__status--open { background: rgba(79,174,124,0.15); color: var(--trust-green-bright); }
+.campaign-card__status--matching,
+.campaign-card__status--in_progress { background: rgba(212,162,76,0.15); color: var(--ledger-gold-bright); }
+.campaign-card__status--verification { background: rgba(184,134,47,0.15); color: var(--caution-amber); }
+.campaign-card__status--completed { background: rgba(245,241,232,0.08); color: var(--text-secondary); }
+.campaign-card__status--cancelled { background: rgba(196,71,43,0.15); color: var(--risk-red-bright); }
+
+.campaign-card__desc { font-size: 12.5px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
+
+.campaign-card__meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(245,241,232,0.025);
+  border-radius: var(--radius-sm);
+}
+.campaign-card__meta-label { font-size: 9.5px; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; }
+.campaign-card__meta-value { font-size: 13px; color: var(--text-primary); font-weight: 600; margin-top: 2px; }
+
+.campaign-card__btn {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.campaign-card__btn:hover { border-color: var(--ledger-gold); color: var(--ledger-gold-bright); }

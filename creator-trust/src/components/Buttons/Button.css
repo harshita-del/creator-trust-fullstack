@@ -1,0 +1,68 @@
+/* src/components/Buttons/Button.css */
+.ct-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.ct-btn--sm { padding: 8px 16px; font-size: 13px; }
+.ct-btn--md { padding: 12px 22px; font-size: 14px; }
+.ct-btn--lg { padding: 16px 30px; font-size: 15px; }
+
+.ct-btn--primary {
+  background: var(--ledger-gold);
+  color: var(--ink);
+}
+.ct-btn--primary:hover:not(:disabled) {
+  background: var(--ledger-gold-bright);
+  transform: translateY(-1px);
+}
+
+.ct-btn--outline {
+  background: transparent;
+  border-color: var(--line-strong);
+  color: var(--text-primary);
+}
+.ct-btn--outline:hover:not(:disabled) {
+  border-color: var(--ledger-gold);
+  color: var(--ledger-gold-bright);
+}
+
+.ct-btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+.ct-btn--ghost:hover:not(:disabled) { color: var(--text-primary); }
+
+.ct-btn--danger {
+  background: transparent;
+  border-color: rgba(196, 71, 43, 0.4);
+  color: var(--risk-red-bright);
+}
+.ct-btn--danger:hover:not(:disabled) {
+  background: rgba(196, 71, 43, 0.12);
+  border-color: var(--risk-red-bright);
+}
+
+.ct-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+.ct-btn__spinner {
+  width: 14px; height: 14px;
+  border: 2px solid rgba(0,0,0,0.25);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: ct-spin 0.7s linear infinite;
+}
+.ct-btn--outline .ct-btn__spinner,
+.ct-btn--ghost .ct-btn__spinner { border-color: rgba(245,241,232,0.25); border-top-color: var(--text-primary); }
+
+@keyframes ct-spin { to { transform: rotate(360deg); } }
+
+.ct-btn__icon { display: inline-flex; align-items: center; }
