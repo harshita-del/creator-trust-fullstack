@@ -57,13 +57,13 @@ app.get('/api/health', (req, res) => {
 });
 
 // ─── Serve frontend (static landing page + dashboards) ───────
-const frontendDir = path.join(__dirname, '..', 'frontend');
-app.use(express.static(frontendDir));
+// const frontendDir = path.join(__dirname, '..', 'frontend');
+// app.use(express.static(frontendDir));
 
-app.get('*', (req, res, next) => {
-  if (req.path.startsWith('/api/')) return next();
-  res.sendFile(path.join(frontendDir, 'index.html'));
-});
+// app.get('*', (req, res, next) => {
+//   if (req.path.startsWith('/api/')) return next();
+//   res.sendFile(path.join(frontendDir, 'index.html'));
+// });
 
 // ─── 404 + error handlers ─────────────────────────────────────
 app.use('/api/', (req, res) => {
