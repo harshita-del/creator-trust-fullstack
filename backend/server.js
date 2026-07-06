@@ -56,11 +56,9 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', service: 'asliconnect-backend', time: new Date().toISOString() });
 });
 
-<<<<<<< HEAD
-// ─── Serve frontend (static landing page + dashboards) ───────
-=======
-// // ─── Serve frontend (static landing page + dashboards) ───────
->>>>>>> 168d75d (Prepare backend for Render)
+
+// // // ─── Serve frontend (static landing page + dashboards) ───────
+// >>>>>>> 168d75d (Prepare backend for Render)
 // const frontendDir = path.join(__dirname, '..', 'frontend');
 // app.use(express.static(frontendDir));
 
